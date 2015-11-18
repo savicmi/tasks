@@ -1,0 +1,121 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+html {
+    overflow-x: none;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+form {padding:0; margin:0;}
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+root {
+    display: block;
+}
+
+body {
+    font-size: 16px;
+}
+/* Message panels */
+.panel-default {
+    border: 0px solid transparent;
+    box-shadow: none;
+}
+.message-panel {
+    margin: 15px 0;
+}
+.message-panel > .panel-heading {
+    color: #777777;
+    background-color: #F5F5F5;
+    border-color: #ddd;
+    border-radius: 0;
+    border-bottom: 1px solid #777777;
+}
+.message-panel .panel-body {
+    color: #777777;
+    background-color: #F5F5F5;
+    border-radius: 0;
+}
+    .message-panel .panel-body .subject {
+        color: #548BA6;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+.message-panel > .panel-footer {
+    color: #777777;
+    background-color: #F5F5F5;
+    border-color: #ddd;
+    border-radius: 0;
+    border-bottom: 3px solid #548BA6;
+    text-align: right;
+}
+
+/* Buttons within message panels */
+.btn {
+    display: inline-block;
+    padding: 6px 22px;
+    border-radius: 0px;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.btn-default {
+    color: #FFFFFF;
+    background-color: #548BA6;
+    border-color: #548BA6;
+}
+    .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+        background-color: #133F54;
+        border-color: #133F54;
+        color: #ffffff;
+    }
+
+.pull-right {
+    text-align: right;
+}
+
+/* The "quote=" header part */
+.quoteheader {
+    color: #333;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 0 0.3em;
+}

@@ -1,0 +1,20 @@
+--------------------------------------------------
+Form task
+--------------------------------------------------
+I guess that this task is part of a real project, where it would be possible to add new delivery methods, as well as change their names. 
+However, I have done what is written in the task description and in accordance with the attached image. 
+So the emphasis is on the form and updating existing methods which are already in the database. 
+I've done the task using PHP/MySQL, CSS, Bootstrap framework and jQuery library.
+
+To create a database "deliveries" (there are two tables: delivery_method and delivery_ranges), please use "deliveries.sql" file.
+
+There are 5 delivery methods, covering a variety of options planned in the task (some input fields are filled in and some are empty):
+1. method - has it's price
+2. method - ranges (4 range rows)
+3. method - ranges (2 range rows)
+4. method - have no value (unavailable)
+5. method - value as zero (free)
+
+Database parameters are in /class/DeliveryMethods.php file.
+
+Of course, the main file with the form is index.php in root folder and there are located 3 images in order to demonstrate the form layout.

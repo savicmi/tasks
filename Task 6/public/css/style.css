@@ -1,0 +1,234 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+html {
+    overflow-x: none;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+form {padding:0; margin:0;}
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* Header */
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    color: #6C831C;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Form panel */
+.panel-default {
+    border: 0 solid transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+.form-panel, .results-panel, .links-panel  {
+    margin: 15px 0;
+}
+.form-panel .panel-body {
+    color: #777777;
+    background-color: #E4EACF;
+    border-radius: 0;
+}
+
+/* Inputs and button */
+label {
+    font-size: 20px;
+    font-weight: 300;
+}
+label .req {
+    margin: 2px;
+    color: #DA2E29;
+}
+
+.form-control {
+    height: 44px;
+    padding: 9px 10px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #777777;
+    background: #F4F7E8 none;
+    border: 2px solid #5E750F;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #F2BA1C;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 1000px #F4F7E8 !important;
+    -webkit-text-fill-color: #777777 !important;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: inset 0px 0px 1000px #09394C !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+#newsletter textarea {
+    max-width: 100%;
+    width: 100%;
+}
+
+.btn-custom {
+    background-color: #3A4809;
+    border-color: #3A4809;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0;
+    margin-top: 10px;
+}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active {
+    background-color: #262F05;
+    border-color: #262F05;
+    color: #ffffff;
+}
+.btn-custom:active:focus, .btn-custom:focus {
+    outline: thin dotted;
+    outline: 0 auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn-custom.disabled:hover, .btn-custom.disabled:focus, .btn-custom.disabled:active, .btn-custom.disabled.active,
+.btn-custom[disabled]:hover, .btn-custom[disabled]:focus, .btn-custom[disabled]:active, .btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover, fieldset[disabled] .btn-custom:focus, fieldset[disabled] .btn-custom:active, fieldset[disabled] .btn-custom.active {
+    background-color: #3A4809;
+    border-color: #3A4809;
+}
+
+.btn-lg {
+    padding: 15px 8px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.alert {
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #B31831;
+}
+form .alert {
+    display: none;
+}
+
+.has-error .form-control:focus {
+    border-color: #843534;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Ajax overlay effect with a loading image */
+#ajax-loader {
+    display: none;
+    background: rgba(0,0,0,.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    z-index: 999;
+}
+
+    #ajax-loader span {
+        padding: 5px 5px 20px 5px;
+        color: #ffffff;
+        position: relative;
+        top: 50%;
+        background: url('../images/ajax-loader.gif') no-repeat bottom;
+    }
+
+/* Modal boxes */
+.modal-content {
+    border-radius: 0;
+}
+.modal-success .modal-header {
+    color: #FFFFFF;
+    background-color: #455A3C;
+    border-color: #dff0d8;
+}
+.modal-success .modal-body {
+    color: #3c763d;
+    background-color: #dff0d8;
+    font-size: 16px;
+}
+.modal-success .modal-footer {
+    border-top: 1px solid #D4D4D4;
+    background-color: #EEEEEE;
+}
+.modal-fail .modal-header {
+    color: #FFFFFF;
+    background-color: #962F39;
+    border-color: #f2dede;
+}
+.modal-fail .modal-body {
+    color: #a94442;
+    background-color: #f2dede;
+    font-size: 16px;
+}
+.modal-fail .modal-footer {
+    border-top: 1px solid #D4D4D4;
+    background-color: #EEEEEE;
+}
+.modal-header .close {
+    color: #FFFFFF;
+}

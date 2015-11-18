@@ -1,0 +1,19 @@
+--------------------------------------------------
+Simple web parser
+--------------------------------------------------
+This simple web parser only supports elements, identifiers and classes as an item.
+It is possible to combine these options, e.g. you can specify "div.article#title", "td h2 .subject" etc.
+
+According to the HTML specifications, ID tokens may contain periods ("."), although it isn't a good practice. This parser supports it.
+For example, if you have id="simple.parser" on your page, you need to enter "#simple\.parser" (without quotes, of course).
+Otherwise, it will be parsing as id="simple" and class="parser" for that element.
+
+Finally, the parser returns the inner HTML content as a result, and also, it will return a list with links (their href attributes) if any.
+
+Examples:
+
+Address: http://www.polovniautomobili.com/putnicka-vozila/pretraga?without_price=1&showOldNew=all
+Item: #searchlist-items .item.extend.featured
+
+Address: http://kudos-rs.com
+Item: section#team h5.name

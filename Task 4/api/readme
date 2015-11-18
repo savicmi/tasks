@@ -1,0 +1,90 @@
+For testing purposes of HTTP requests, you can use "Advanced REST client for Google Chrome" or cURL - a command line tool.
+Since this is a demo API, changes are not made to the original data.json, but it generates a copy with the same format as the data.json file.
+API will always returns an array as sorted in descending order according to the message id.
+
+--------------------------------------------------
+GET
+--------------------------------------------------
+GET is the simplest type of HTTP request method, the one that browsers use each time you click a link or type a URL into the address bar.
+GET request of this API accepts one or more arguments, that represent message IDs.
+
+Examples:
+
+URL: /api/messages (returns an array with all messages, i.e. the entire contents of data.json file)
+URL: /api/messages/2146 (returns an array with 1 message)
+URL: /api/messages/2028/2146/2039 (returns an array with 3 messages)
+(for example, an absolute path can be: http://localhost/task4/api/messages/2028/2146/2039)
+
+curl -v -X GET URL
+
+--------------------------------------------------
+DELETE
+--------------------------------------------------
+DELETE request removes the messages specified by arguments. API accepts one or more arguments, that represent message IDs.
+
+Examples:
+
+URL: /api/messages/2146 (returns an array with all messages except the message where is ID = 2146)
+URL: /api/messages/2028/2146/2039 (returns an array with all messages except messages with IDs 2028, 2146 and 2039)
+
+curl -v -X DELETE URL
+
+--------------------------------------------------
+PUT
+--------------------------------------------------
+PUT request is used when you wish to update the message identified by the URL. Instead of {JSON_DATA}, you pass a concrete JSON data.
+Since this is a demo API, you can pass within JSON_DATA the message id which is different from the argument in the URL, and it will also be updated, unless the message with the same id already exists, because message identifiers are unique integers. Finally, after the changes, it returns the entire new array.
+
+Example:
+
+      {
+         "id":"2039",
+         "from":{
+            "id":"330",
+            "name":"Pera"
+         },
+         "to":{
+            "id":"880",
+            "name":"Mika"
+         },
+         "type":"1",
+         "replyto":"0",
+         "date_sent":"1341091049",
+         "date_read":"0",
+         "subject":"Hello!",
+         "message":"Hi Mika!",
+         "message_formatted":"test inbox",
+         "date_sent_formatted":{
+            "id":1190,
+            "timestamp":1341100800,
+            "month":7,
+            "day":1,
+            "year":2012,
+            "week":26,
+            "dayid":1,
+            "weekday":"Sun",
+            "mname":"Jul",
+            "formatted":"Jul 1, 2012"
+         },
+         "date_read_formatted":[
+
+         ]
+      }
+	  
+URL: /api/messages/2039
+
+curl -v -X PUT -d {JSON_DATA} URL
+curl -X PUT -H "Content-Type: application/json" -d {JSON_DATA} URL
+
+--------------------------------------------------
+POST
+--------------------------------------------------
+POST request is used when you wish to create a new message. Instead of {JSON_DATA}, you pass a concrete JSON data. 
+If forwarded message id already exists, it will change to the first higher number after the biggest in the array.
+There are no arguments in POST request after "messages" endpoint.
+
+Example:
+
+URL: /api/messages
+
+curl -v -X POST -d {JSON_DATA} URL
